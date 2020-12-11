@@ -35,33 +35,28 @@ public class HomePagePages extends AbstractPageBase{
         compare.click();
     }
 
+    //global variables
     int B; int E ;
 
     public void getTextFromModules(String moduleName){
 
         List<String> elementsList0 = new ArrayList<>();
-        int B = 2;
-        int E = 10;
 
-        for(int i = B; i < E; i++){
-
-        }
-
-        if (moduleName == "Compare"){
+        if (moduleName.equalsIgnoreCase("Compare")){
             waitForClick();
             BrowserUtilities.wait(2);
-            for (int i = 2; i <10 ; i++) {
+            for (int i = 2; i <12 ; i++) {
                 WebElement autoInsurance22 = driver.findElement(By.xpath("(//a[@data-track-name='header_link'])["+i+"]"));
                 elementsList0.add(autoInsurance22.getText());
             }
-        }else if (moduleName == "Tools&Tips"){
+        }else if (moduleName.equalsIgnoreCase("Tools&Tips")){
             tools_tips.click();
             BrowserUtilities.wait(2);
             for (int i = 13; i <17 ; i++) {
                 WebElement autoInsurance22 = driver.findElement(By.xpath("(//a[@data-track-name='header_link'])["+i+"]"));
                 elementsList0.add(autoInsurance22.getText());
             }
-        }else if (moduleName == "Company"){
+        }else if (moduleName.equalsIgnoreCase("Company")){
             company.click();
             BrowserUtilities.wait(2);
             for (int i = 18; i <23 ; i++) {
@@ -84,7 +79,7 @@ public class HomePagePages extends AbstractPageBase{
         if (moduleName.equalsIgnoreCase("Compare")){
             waitForClick();
             BrowserUtilities.wait(2);
-            B = 2; E = 10;
+            B = 2; E = 12;
         }else if (moduleName.equalsIgnoreCase("Tools&Tips")){
             tools_tips.click();
             BrowserUtilities.wait(2);

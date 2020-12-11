@@ -30,7 +30,7 @@ public class HomePagesTests extends AbstractTestBase {
 
     @Test(description = "Get Elements from Modules")
     public void getElementsFromModules(){
-        homePagePages.getTextFromModules_Cnd("company");
+        homePagePages.getTextFromModules("compare");
     }
 
 
